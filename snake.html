@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<meta http-equiv="X-UA-Compatible" content="firefox" />
 <title>Snake</title>
 </head>
 
@@ -22,6 +22,39 @@ window.onload = function() {
     setInterval(draw, 1000 / x);
 };
 
+// game world
+var gridSize = tileSize = 20;
+var nextX = nextY = 0;
+
+//snake
+var defaultTailSize = 3;
+var tailSize = defaultTailSize;
+var snakeTrail = [];
+var snakeX = snakeY = 10;
+
+// apple
+var appleX = (appleY = 15);
+
+function keyDownEvent(e) {
+    switch (e.keyCode) {
+        case 37:
+            nextX = -1;
+            nextY = 0;
+            break;
+        case 38:
+            nextX = 0;
+            nextY = -1;
+            break;
+        case 39:
+            nextX = 1;
+            nextY = 0;
+            break;
+        case 40:
+            nextX = 0;
+            nextY = 1;
+            break;
+    }
+}
 
 
 

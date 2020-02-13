@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<title>Snake</title>
+</head>
+
+<body>
+<canvas id="canvas" width="400" height="400"></canvas>    
+<script>
+var canvas, ctx;
+
+window.onload = function() {
+    canvas = document.getElementById("canvas");
+    ctx = canvas.getContext("2d");
+
+    document.addEventListener("keydown", keyDownEvent);
+
+    var x = 8;
+    setInterval(draw, 1000 / x);
+};
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
